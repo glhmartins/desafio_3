@@ -1,5 +1,5 @@
 class Disciplina 
-  attr_reader :cod_disciplina, :cod_curso, :nota, :carga_horaria, :ano_semestre
+  attr_accessor :cod_disciplina, :cod_curso, :nota, :carga_horaria, :ano_semestre
   def initialize (cod_disciplina, cod_curso, nota, carga_horaria, ano_semestre)
     @cod_disciplina = cod_disciplina
     @cod_curso = cod_curso
