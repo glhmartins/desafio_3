@@ -2,6 +2,9 @@ require "csv"
 require_relative "models/disciplina.rb"
 require_relative "models/aluno.rb"
 require_relative "models/curso.rb"
+require_relative 'modulos/metodos.rb'
+
+include Cr
 
 alunos = Hash.new
 cursos = Hash.new
@@ -29,5 +32,5 @@ puts "-----------------------------------"
 
 puts "-----Média de CR dos cursos ------"
 cursos.keys.sort_by(&:to_i).each do |cod_curso|
-  puts "#{cod_curso} - #{cursos[cod_curso].cr_medio}"
+  puts "#{cod_curso} - #{cursos[cod_curso].calcula_cr}"
 end
